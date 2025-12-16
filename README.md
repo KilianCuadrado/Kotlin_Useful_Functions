@@ -1,5 +1,6 @@
 <h1>Kotlin_Useful_Functions</h1>
-[!WARNING]
+
+> [!CAUTION]
 > Proyect uses the JDK Amazon Correto 23 so becareful
 <h3>The fuctions are in src/main/kotlin there you will see a filed named SimpleFunctions you can copy and paste onto your proyect.</h3>
 <h3>For now there are 3 functions.</h3>
