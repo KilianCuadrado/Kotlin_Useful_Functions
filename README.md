@@ -1,10 +1,10 @@
 <h1>Kotlin_Useful_Functions</h1>
 
 > [!CAUTION]
-> Proyect uses the JDK Amazon Correto 23 so becareful
+> Proyect uses the JDK Amazon Correto 23 so becareful.
 
 > [!Tip]
-> The fuctions are in src/main/kotlin there you will see a filed named SimpleFunctions 
+> The fuctions are in src/main/kotlin there you will see a filed named Simple_Useful_Functions. 
 <h3>For now there are 3 functions you can copy and paste onto your proyect.</h3>
 <h4><strong>- Functions:</strong></h4>
 <h5>1. mostrarDataActual: Grabs local date from device and returns it in spanish format.</h5>
