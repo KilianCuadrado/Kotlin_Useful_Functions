@@ -18,10 +18,14 @@ fun mostrarDataActual(): String? {
 /**
  * You can put strings and it will show a numbered list of those strings and if you especify with 'opcioSortidaMenu' it will display at the bottom with the number 0..
  * @author @KilianCuadrado
- * @param opcionsMenu All of the options you want to display,
+ * @param opcionsMenu All of the options you want to display.
  * @param opcioSortidaMenu Only option that will show with number 0 usually used for exiting a menu.
+ * @param mostrarNumerat A boolean that asks if the coder wants to display the menu numered or not.
+ * @param titolMenu Option to put a title to the menu to make it look more apealing to the user.
  */
-fun mostrarMenu(vararg opcionsMenu: String, opcioSortidaMenu: String = "") {
+fun mostrarMenu(vararg opcionsMenu: String, opcioSortidaMenu: String = "", mostrarNumerat: Boolean, titolMenu: String="") {
+    val teTitul = titolMenu.isNotEmpty()
+    //Comprovar si es vol afegir un titul al menu
     val teSortida = opcioSortidaMenu.isNotEmpty()
     // Una suma amb if per crear correctament l'array amb les opcions
     val totalOpcions = opcionsMenu.size + if (teSortida) 1 else 0
@@ -38,10 +42,20 @@ fun mostrarMenu(vararg opcionsMenu: String, opcioSortidaMenu: String = "") {
         arrayOpcionsMenu[opcionsMenu.size][0] = "0. "
         arrayOpcionsMenu[opcionsMenu.size][1] = opcioSortidaMenu
     }
-    // Mostrar menú
-    for (opcio in arrayOpcionsMenu) {
-        println(opcio[0] + opcio[1])
+    // Mostrar menú amb titul si s'espcifica
+    if (teTitul){
+        println("--- $titolMenu ---")
     }
+    if (mostrarNumerat) {
+        for (opcioNumerada in arrayOpcionsMenu) {
+            println(opcioNumerada[0] + opcioNumerada[1])
+        }
+    }else{
+        for (opcioNoNumerada in arrayOpcionsMenu) {
+            println("- ${opcioNoNumerada[1]}")
+        }
+    }
+
 }
 
 /**
