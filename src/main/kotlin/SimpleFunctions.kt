@@ -3,6 +3,8 @@ package itb
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+//Utilitat per la genaracio random de numero
+import kotlin.random.Random
 
 /**
  * Grabs local date from device and returns it in spanish format.
@@ -16,7 +18,7 @@ fun mostrarDataActual(): String? {
 }
 
 /**
- * You can put strings and it will show a numbered list of those strings and if you especify with 'opcioSortidaMenu' it will display at the bottom with the number 0..
+ * You can put strings and it will show a numbered list of those strings and if you especify with 'opcioSortidaMenu' it will display at the bottom with the number 0.
  * @author @KilianCuadrado
  * @param opcionsMenu All of the options you want to display.
  * @param opcioSortidaMenu Only option that will show with number 0 usually used for exiting a menu.
@@ -63,7 +65,7 @@ fun mostrarMenu(vararg opcionsMenu: String, opcioSortidaMenu: String = "", mostr
  * @author @KilianCuadrado
  * @param missatge Text that will show for asking the input to the user.
  * @param missatgeError Text that will tell the user that the input is wrong.
- * @return Number that the user has put. REMEMBER THE RETURN NUMBER IS ALWAYS ON FLOAT.
+ * @return Float that the user has put. REMEMBER THE RETURN NUMBER IS ALWAYS ON FLOAT.
  */
 fun demanarNumeroControlat (missatge:String, missatgeError: String): Float{
     print(missatge)
@@ -74,4 +76,23 @@ fun demanarNumeroControlat (missatge:String, missatgeError: String): Float{
         numeroUsuari = readln().toFloatOrNull()
     }
     return numeroUsuari
+}
+
+/**
+ * Generates a random number between two number if unspecified it will default to a range of 1 to 10 in Int
+ * @author @KilianCuadrado
+ * @param numeroMaxim Indicates the maximum of the range of the generation. Default is 10
+ * @param numeroMinim Indicates the minimum of the range of the generation. Default is 1
+ * @param tipusDeNumeroRetorn Indicates the type of random you want to generate default is Int also if type of number is not indicated correctly it will also default to Int
+ * @return Number converted to the type specified before at tipusDeNumeroRetorn
+ */
+fun crearNumeroRandom(tipusDeNumeroRetorn: String="Int", numeroMinim: Number=1, numeroMaxim: Number=10): Number {
+    var numeroATornar: Number
+    when (tipusDeNumeroRetorn){
+        "Int"->{numeroATornar = Random.nextInt(numeroMinim.toInt(), numeroMaxim.toInt())}
+        "Double"->{numeroATornar= Random.nextDouble(numeroMinim.toDouble(), numeroMaxim.toDouble())}
+        "Float"->{numeroATornar = Random.nextFloat()}
+        else -> {numeroATornar = Random.nextInt(numeroMinim.toInt(), numeroMaxim.toInt())}
+    }
+    return numeroATornar
 }
