@@ -87,12 +87,19 @@ fun demanarNumeroControlat (missatge:String, missatgeError: String): Float{
  * @return Number converted to the type specified before at tipusDeNumeroRetorn
  */
 fun crearNumeroRandom(tipusDeNumeroRetorn: String="Int", numeroMinim: Number=1, numeroMaxim: Number=10): Number {
-    var numeroATornar: Number
-    when (tipusDeNumeroRetorn){
-        "Int"->{numeroATornar = Random.nextInt(numeroMinim.toInt(), numeroMaxim.toInt())}
-        "Double"->{numeroATornar= Random.nextDouble(numeroMinim.toDouble(), numeroMaxim.toDouble())}
-        "Float"->{numeroATornar = Random.nextFloat()}
-        else -> {numeroATornar = Random.nextInt(numeroMinim.toInt(), numeroMaxim.toInt())}
+    val numeroATornar = when (tipusDeNumeroRetorn){
+        "Int"->{
+            Random.nextInt(numeroMinim.toInt(), numeroMaxim.toInt())
+        }
+        "Double"->{
+            Random.nextDouble(numeroMinim.toDouble(), numeroMaxim.toDouble())
+        }
+        "Float"->{
+            Random.nextFloat()
+        }
+        else -> {
+            Random.nextInt(numeroMinim.toInt(), numeroMaxim.toInt())
+        }
     }
     return numeroATornar
 }
