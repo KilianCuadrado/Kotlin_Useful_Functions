@@ -1,4 +1,6 @@
 import itb.crearNumeroRandom
+import itb.demanarNumeroControlat
+import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import kotlin.test.assertIs
@@ -16,5 +18,4 @@ class SimpleFunctionsKtTest {
     fun checkSiRetornaFloat(){
         assertIs<Float>(crearNumeroRandom("Float"))
     }
-
 }
