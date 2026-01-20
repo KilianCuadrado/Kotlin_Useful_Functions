@@ -5,8 +5,10 @@
 
 > [!Tip]
 > The fuctions are in src/main/kotlin there you will see a filed named Simple_Useful_Functions. 
-<h3>For now there are 3 functions you can copy and paste onto your proyect.</h3>
+<h3>For now there are 6 functions you can copy and paste onto your proyect.</h3>
 <h4><strong>- Functions:</strong></h4>
 <h5>1. mostrarDataActual: Grabs local date from device and returns it in spanish format.</h5>
-<h5>2. mostrarMenu: You can put strings and i will show a numbered list ,or not dependign of your choice, of those strings, you can also add a tittle if you put 'titolMenu' to the menu and if you especify with 'opcioSortidaMenu' it will display at the bottom with the number 0.</h5>
-<h5>3. demanarNumeroControlat: It will ask the user for a NUMBER and will make sure the user doesn't put a string or text. !IMPORTANT it will always return a float type number conver with .toX for better convinience.</h5>
+<h5>2. mostrarHoraActual: Grabs local hour from device and returns it in 'String?'.</h5>
+<h5>3. mostrarMenu: You can put strings and i will show a numbered list ,or not dependign of your choice, of those strings, you can also add a tittle if you put 'titolMenu' to the menu and if you especify with 'opcioSortidaMenu' it will display at the bottom with the number 0.</h5>
+<h5>4. demanarNumeroControlat: It will ask the user for a NUMBER and will make sure the user doesn't put a string or text. !IMPORTANT it will always return a float type number conver with .toX for better convinience.</h5>
+<h5>5. crearNumeroRandom: It will generate a randfom number of the type specified default is with int in a 1 to 10 range.</h5>
